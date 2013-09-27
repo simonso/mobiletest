@@ -16,16 +16,15 @@ Notice that is is just a property file.  No quote is necessary for the name-valu
 
 3. Create a file in $HOME/.signing/suplean-release.gradle.
 
-	android {
-  		signingConfigs {
-    			release {
-      				storeFile file(project.property("suplean.signing") + ".keystore")
-      				storePassword "xxxxx"
-      				keyAlias "suplean-release"
-      				keyPassword "xxxxxx"
-    			}
-  		}
-
+    android {
+        signingConfigs {
+            release {
+                storeFile file(project.property("suplean.signing") + ".keystore")
+                storePassword "xxxxx"
+                keyAlias "suplean-release"
+                keyPassword "xxxxxx"
+            }
+        }
   		buildTypes {
     			release {
       				runProguard true
